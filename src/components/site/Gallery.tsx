@@ -2,18 +2,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import exterior from "@/assets/hotel-exterior.png";
-import pool from "@/assets/pool.png";
 import silver from "@/assets/room-silver.jpg";
 import gold from "@/assets/room-gold.jpg";
 import diamond from "@/assets/room-diamond.jpg";
 import presidential from "@/assets/room-presidential.jpg";
+import whitehouse from "@/assets/room-whitehouse.jpg";
 import bar from "@/assets/amenity-bar.jpg";
 import hall from "@/assets/amenity-hall.jpg";
 import spa from "@/assets/amenity-spa.jpg";
 
 const images = [
   { src: exterior, span: "row-span-2" },
-  { src: pool, span: "" },
+  { src: whitehouse, span: "" },
   { src: gold, span: "" },
   { src: presidential, span: "row-span-2" },
   { src: bar, span: "" },
