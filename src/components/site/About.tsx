@@ -1,8 +1,8 @@
 import { motion, useInView, useMotionValue, useTransform, animate } from "motion/react";
 import { useEffect, useRef } from "react";
 import exterior from "@/assets/hotel-exterior.png";
-import pool from "@/assets/pool.png";
 import room from "@/assets/room-gold.jpg";
+import roomAlt from "@/assets/room-diamond.jpg";
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -37,8 +37,8 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            src={pool}
-            alt="Pool"
+            src={roomAlt}
+            alt="Diamond suite"
             className="absolute bottom-0 right-0 w-[60%] h-[55%] object-cover rounded-2xl shadow-gold border-4 border-background animate-float"
           />
           <motion.img
