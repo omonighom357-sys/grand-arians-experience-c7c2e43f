@@ -15,6 +15,10 @@ export function Footer() {
           <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
             A top-class luxury retreat in Udu, Delta State — where every stay feels like coming home.
           </p>
+          <div className="mt-5 space-y-1 text-sm text-muted-foreground">
+            <div><a href="mailto:arianshotelsandsuites@gmail.com" className="hover:text-primary transition-colors">arianshotelsandsuites@gmail.com</a></div>
+            <div><a href="https://wa.me/2348165879354" className="hover:text-primary transition-colors">+234 816 587 9354</a></div>
+          </div>
         </div>
 
         <div>

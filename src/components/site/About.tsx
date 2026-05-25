@@ -30,7 +30,7 @@ export function About() {
             transition={{ duration: 1 }}
             src={exterior}
             alt="Hotel exterior"
-            className="absolute top-0 left-0 w-[65%] h-[70%] object-cover rounded-2xl shadow-elegant"
+            className="absolute top-0 left-0 w-[65%] h-[70%] object-cover rounded-2xl shadow-elegant cinematic-warm"
           />
           <motion.img
             initial={{ opacity: 0, y: 40 }}
@@ -39,7 +39,7 @@ export function About() {
             transition={{ duration: 1, delay: 0.2 }}
             src={roomAlt}
             alt="Diamond suite"
-            className="absolute bottom-0 right-0 w-[60%] h-[55%] object-cover rounded-2xl shadow-gold border-4 border-background animate-float"
+            className="absolute bottom-0 right-0 w-[60%] h-[55%] object-cover rounded-2xl shadow-gold border-4 border-background animate-float cinematic-warm"
           />
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
@@ -48,7 +48,7 @@ export function About() {
             transition={{ duration: 1, delay: 0.4 }}
             src={room}
             alt="Suite"
-            className="absolute top-12 right-8 w-32 h-32 object-cover rounded-xl border-4 border-background shadow-elegant hidden md:block"
+            className="absolute top-12 right-8 w-32 h-32 object-cover rounded-xl border-4 border-background shadow-elegant hidden md:block cinematic-warm"
           />
         </div>
 
