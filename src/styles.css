@@ -209,3 +209,63 @@
   background-size: 200% 200%;
   animation: gradient-shift 8s ease infinite;
 }
+
+/* Cinematic image grading — applied to real hotel photography */
+.cinematic {
+  filter: contrast(1.08) saturate(1.12) brightness(1.02);
+  transition: filter 0.7s ease, transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.cinematic-warm {
+  filter: contrast(1.1) saturate(1.18) brightness(1.04) sepia(0.08) hue-rotate(-4deg);
+}
+.cinematic:hover { filter: contrast(1.12) saturate(1.2) brightness(1.06); }
+
+/* Ambient drifting gradient orbs */
+@keyframes drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.1); }
+}
+@keyframes drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 40px) scale(1.15); }
+}
+.animate-drift-1 { animation: drift-1 14s ease-in-out infinite; }
+.animate-drift-2 { animation: drift-2 18s ease-in-out infinite; }
+
+/* Luxury particle drift */
+@keyframes particle-rise {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) translateX(40px); opacity: 0; }
+}
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: oklch(0.86 0.16 88);
+  box-shadow: 0 0 12px oklch(0.86 0.16 88 / 0.8);
+  animation: particle-rise linear infinite;
+}
+
+/* Premium button shine */
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::after {
+  content: ""; position: absolute; top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.4), transparent);
+  transition: left 0.7s ease;
+}
+.btn-shine:hover::after { left: 100%; }
+
+/* Cinematic section reveal on scroll */
+.section-fade {
+  mask-image: linear-gradient(180deg, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* Glow pulse for WhatsApp float */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.7 0.18 145 / 0.6), 0 10px 30px oklch(0 0 0 / 0.4); }
+  50% { box-shadow: 0 0 0 18px oklch(0.7 0.18 145 / 0), 0 10px 30px oklch(0 0 0 / 0.4); }
+}
+.animate-glow-pulse { animation: glow-pulse 2.4s ease-in-out infinite; }
