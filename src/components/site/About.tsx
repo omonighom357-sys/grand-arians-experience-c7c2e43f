@@ -90,9 +90,9 @@ export function About() {
 
           <div className="mt-12 grid grid-cols-3 gap-6">
             {[
-              { value: 12000, suffix: "+", label: "Guests Served" },
-              { value: 5, suffix: "", label: "Luxury Suites" },
-              { value: 8, suffix: "+", label: "Years of Excellence" },
+              { value: 1200, suffix: "+", label: "Guests Served" },
+              { value: 2, suffix: "", label: "Luxury Suites" },
+              { value: 3, suffix: "+", label: "Years of Excellence" },
             ].map((s) => (
               <motion.div
                 key={s.label}

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Waves, Wifi, UtensilsCrossed, Tv, Zap, Dumbbell, Plane, Building2 } from "lucide-react";
+import { Waves, Wifi, UtensilsCrossed, Tv, Zap, Dumbbell, Gamepad2, Building2 } from "lucide-react";
 
 const items = [
   { icon: Waves, label: "Swimming Pool", desc: "Crystal-clear outdoor pool with poolside service." },
@@ -8,7 +8,7 @@ const items = [
   { icon: Tv, label: "Smart Rooms", desc: "Smart TVs, climate control and premium bedding." },
   { icon: Zap, label: "24/7 Power", desc: "Uninterrupted power supply, day and night." },
   { icon: Dumbbell, label: "Gym & Spa", desc: "Massage, wellness and energizing workouts." },
-  { icon: Plane, label: "Airport Pickup", desc: "Premium chauffeur on request, hassle-free." },
+  { icon: Gamepad2, label: "Games Lounge", desc: "PlayStation, board games and a cozy lounge to unwind." },
   { icon: Building2, label: "Conference Hall", desc: "250-capacity hall for events and weddings." },
 ];
 
