@@ -248,6 +248,23 @@
   animation: particle-rise linear infinite;
 }
 
+/* Gold rain falling particles */
+@keyframes gold-rain-fall {
+  0% { transform: translateY(-10vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(110vh) translateX(20px); opacity: 0; }
+}
+.gold-rain {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  background: oklch(0.86 0.16 88);
+  box-shadow: 0 0 10px oklch(0.86 0.16 88 / 0.9), 0 0 20px oklch(0.78 0.14 82 / 0.5);
+  animation: gold-rain-fall linear infinite;
+  will-change: transform, opacity;
+}
+
 /* Premium button shine */
 .btn-shine { position: relative; overflow: hidden; }
 .btn-shine::after {
@@ -283,5 +300,6 @@
   .animate-drift-2,
   .animate-float,
   .animate-glow-pulse,
-  .particle { animation: none !important; }
+  .particle,
+  .gold-rain { animation: none !important; }
 }
