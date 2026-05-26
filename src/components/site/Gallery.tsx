@@ -1,16 +1,30 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
-import exterior from "@/assets/hotel-exterior.png";
+import exterior from "@/assets/exterior-front.jpg";
 import silver from "@/assets/room-silver.jpg";
 import gold from "@/assets/room-gold.jpg";
 import diamond from "@/assets/room-diamond.jpg";
+import whitehouse from "@/assets/suite-whitehouse.jpg";
+import presidential from "@/assets/suite-presidential.jpg";
+import outdoor from "@/assets/amenity-outdoor.jpg";
+import hall1 from "@/assets/amenity-hall-1.jpg";
+import hall2 from "@/assets/amenity-hall-2.jpg";
+import interior from "@/assets/amenity-interior.jpg";
+import gaming from "@/assets/amenity-gaming.jpg";
 
 const images = [
   { src: exterior, span: "col-span-2 row-span-2", label: "The Arians Exterior" },
+  { src: presidential, span: "", label: "Presidential Suite" },
+  { src: whitehouse, span: "", label: "White House Suite" },
+  { src: hall1, span: "col-span-2", label: "Event Hall" },
   { src: gold, span: "", label: "Gold Room" },
+  { src: diamond, span: "", label: "Diamond Room" },
+  { src: outdoor, span: "col-span-2", label: "Outdoor Lounge & Bar" },
+  { src: gaming, span: "", label: "Games Lounge" },
   { src: silver, span: "", label: "Silver Room" },
-  { src: diamond, span: "col-span-2", label: "Diamond Room" },
+  { src: hall2, span: "", label: "Conference Hall" },
+  { src: interior, span: "", label: "Interior Detail" },
 ];
 
 export function Gallery() {

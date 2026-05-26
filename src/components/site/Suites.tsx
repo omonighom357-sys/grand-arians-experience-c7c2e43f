@@ -3,30 +3,51 @@ import { Check, MessageCircle } from "lucide-react";
 import silver from "@/assets/room-silver.jpg";
 import gold from "@/assets/room-gold.jpg";
 import diamond from "@/assets/room-diamond.jpg";
+import whitehouse from "@/assets/suite-whitehouse.jpg";
+import presidential from "@/assets/suite-presidential.jpg";
 
 const WHATSAPP = "2348165879354";
 
 const rooms = [
   {
     name: "Silver Room",
+    tier: "Room",
     price: "₦19,800",
     image: silver,
     desc: "Refined comfort, timeless interiors and a serene atmosphere — the perfect introduction to Arians elegance.",
-    amenities: ["King bed", "Smart TV", "Free Wi-Fi", "Air conditioning"],
+    amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "King bed"],
   },
   {
     name: "Gold Room",
+    tier: "Room",
     price: "₦28,600",
     image: gold,
     desc: "Warm gilded accents, plush bedding and curated finishes for the discerning traveler.",
-    amenities: ["King bed", "Marble bath", "Mini bar", "Premium toiletries"],
+    amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Marble bath"],
   },
   {
     name: "Diamond Room",
+    tier: "Room",
     price: "₦38,500",
     image: diamond,
     desc: "An intimate sanctuary of dark sophistication, crystal lighting and uncompromising comfort.",
-    amenities: ["King bed", "City view", "Lounge area", "Rain shower"],
+    amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Lounge area"],
+  },
+  {
+    name: "White House Suite",
+    tier: "Suite",
+    price: "₦55,000",
+    image: whitehouse,
+    desc: "A statement suite with a plush tufted bed, dedicated lounge and a marble entertainment wall — Arians at its boldest.",
+    amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Private lounge"],
+  },
+  {
+    name: "Presidential Suite",
+    tier: "Suite",
+    price: "₦75,000",
+    image: presidential,
+    desc: "Our flagship suite — warm walnut paneling, ambient lighting and an executive lounge crafted for distinguished guests.",
+    amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Executive lounge"],
   },
 ];
 
@@ -55,7 +76,7 @@ export function Suites() {
           >Every room comes with free cancellation, complimentary Wi-Fi and our signature warm welcome.</motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8">
           {rooms.map((r, i) => (
             <motion.article
               key={r.name}
@@ -75,6 +96,9 @@ export function Suites() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="absolute top-4 left-4 glass-light rounded-full px-3 py-1 text-xs text-foreground/90 flex items-center gap-1.5">
                   <Check className="h-3 w-3 text-primary" /> Free cancellation
+                </div>
+                <div className="absolute top-4 right-4 glass-light rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-primary">
+                  {r.tier}
                 </div>
               </div>
 

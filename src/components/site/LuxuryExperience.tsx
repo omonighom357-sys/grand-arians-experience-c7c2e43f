@@ -15,7 +15,7 @@ const experiences = [
   {
     icon: Briefcase,
     title: "Executive Lifestyle",
-    text: "Private concierge, airport chauffeur, executive lounge access and a 250-capacity hall for boardrooms, summits and weddings.",
+    text: "Private concierge, executive lounge access and a 250-capacity hall for boardrooms, summits and weddings.",
   },
   {
     icon: Wine,
