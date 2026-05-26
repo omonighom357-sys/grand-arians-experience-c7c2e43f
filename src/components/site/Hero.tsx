@@ -1,50 +1,31 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import hero from "@/assets/hotel-exterior.png";
+import hero from "@/assets/exterior-front.jpg";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
 
   return (
     <section ref={ref} id="home" className="relative min-h-screen w-full overflow-hidden">
-      <motion.div style={{ y, scale }} className="absolute inset-0 will-change-transform">
-        <motion.img
-          initial={{ scale: 1.2, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 2.6, ease: [0.2, 0.8, 0.2, 1] }}
+      <motion.div style={{ y }} className="absolute inset-0 will-change-transform">
+        <img
           src={hero}
-          alt="The Arians Hotel exterior at sunset"
-          className="h-full w-full object-cover cinematic-warm"
+          alt="The Arians Hotel & Suites exterior"
+          fetchPriority="high"
+          className="h-full w-full object-cover cinematic-warm animate-hero-zoom will-change-transform"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.1_0.012_60/0.55)_100%)]" />
       </motion.div>
 
-      {/* Floating orbs */}
-      <div className="absolute top-1/4 -left-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-drift-1" />
-      <div className="absolute bottom-1/4 -right-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-drift-2" />
-
-      {/* Luxury light particles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 14 }).map((_, i) => (
-          <span
-            key={i}
-            className="particle"
-            style={{
-              left: `${(i * 7.3) % 100}%`,
-              animationDuration: `${12 + (i % 5) * 3}s`,
-              animationDelay: `${i * 1.1}s`,
-              opacity: 0.5 + (i % 4) * 0.12,
-            }}
-          />
-        ))}
-      </div>
+      {/* Ambient orbs (lightweight) */}
+      <div className="absolute top-1/4 -left-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-drift-1 pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-drift-2 pointer-events-none" />
 
       <motion.div style={{ opacity }} className="relative z-10 container mx-auto px-6 pt-32 pb-24 min-h-screen flex flex-col justify-center">
         <motion.p
