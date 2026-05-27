@@ -12,6 +12,11 @@ import hall1 from "@/assets/amenity-hall-1.jpg";
 import hall2 from "@/assets/amenity-hall-2.jpg";
 import interior from "@/assets/amenity-interior.jpg";
 import gaming from "@/assets/amenity-gaming.jpg";
+import galleryExterior2 from "@/assets/gallery-exterior-2.jpg";
+import galleryBar from "@/assets/gallery-bar.jpg";
+import galleryReception from "@/assets/gallery-reception.jpg";
+import galleryPool from "@/assets/gallery-pool.jpg";
+import galleryHallway from "@/assets/gallery-hallway.jpg";
 
 const images = [
   { src: exterior, span: "col-span-2 row-span-2", label: "The Arians Exterior" },
@@ -25,6 +30,11 @@ const images = [
   { src: silver, span: "", label: "Silver Room" },
   { src: hall2, span: "", label: "Conference Hall" },
   { src: interior, span: "", label: "Interior Detail" },
+  { src: galleryReception, span: "col-span-2", label: "Grand Reception" },
+  { src: galleryPool, span: "", label: "Poolside Cabanas" },
+  { src: galleryBar, span: "", label: "Lounge Bar" },
+  { src: galleryHallway, span: "", label: "Suite Hallway" },
+  { src: galleryExterior2, span: "", label: "Hotel Facade" },
 ];
 
 export function Gallery() {

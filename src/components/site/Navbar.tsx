@@ -33,10 +33,10 @@ export function Navbar() {
     >
       <nav className="container mx-auto flex items-center justify-between px-6">
         <a href="#home" className="flex items-center gap-3 group">
-          <img src={logo} alt="Arians Hotel logo" className="h-11 w-11 transition-transform duration-500 group-hover:rotate-6" />
+          <img src={logo} alt="Arians Hotel logo" className="h-14 w-14 md:h-16 md:w-16 drop-shadow-[0_2px_12px_oklch(0.78_0.16_85/0.4)] transition-transform duration-500 group-hover:rotate-6" />
           <div className="leading-tight">
-            <div className="font-display text-lg tracking-wide text-foreground">The Arians</div>
-            <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Hotel & Suites</div>
+            <div className="font-display text-xl md:text-2xl tracking-wide text-foreground">The Arians</div>
+            <div className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-primary">Hotel & Suites</div>
           </div>
         </a>
 
