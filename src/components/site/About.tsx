@@ -1,6 +1,6 @@
 import { motion, useInView, useMotionValue, useTransform, animate } from "motion/react";
 import { useEffect, useRef } from "react";
-import exterior from "@/assets/hotel-exterior.png";
+import exterior from "@/assets/exterior-front.jpg";
 import room from "@/assets/room-gold.jpg";
 import roomAlt from "@/assets/room-diamond.jpg";
 
