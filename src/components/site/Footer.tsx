@@ -13,7 +13,7 @@ export function Footer() {
             </div>
           </div>
           <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
-            A top-class luxury retreat in Udu, Delta State — where every stay feels like coming home.
+            A Citadel for Comfort — a top-class luxury retreat in Udu, Delta State where every stay feels like coming home.
           </p>
           <div className="mt-5 space-y-1 text-sm text-muted-foreground">
             <div><a href="mailto:thearians.h@gmail.com" className="hover:text-primary transition-colors">thearians.h@gmail.com</a></div>
