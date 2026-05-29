@@ -8,7 +8,7 @@ export function Contact() {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Hello Arians Hotels & Suites,%0A%0AName: ${form.name}%0AEmail: ${form.email}%0A%0A${form.message}`;
-    window.open(`https://wa.me/2348165879354?text=${msg}`, "_blank");
+    window.open(`https://wa.me/2347075748942?text=${msg}`, "_blank");
   };
 
   return (
@@ -25,9 +25,9 @@ export function Contact() {
 
           <ul className="space-y-5">
             {[
-              { icon: Phone, label: "Call us", value: "+234 816 587 9354", href: "tel:+2348165879354" },
-              { icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", href: "https://wa.me/2348165879354" },
-              { icon: Mail, label: "Email", value: "arianshotelsandsuites@gmail.com", href: "mailto:arianshotelsandsuites@gmail.com" },
+              { icon: Phone, label: "Call us", value: "0707 574 8942", href: "tel:+2347075748942" },
+              { icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", href: "https://wa.me/2347075748942" },
+              { icon: Mail, label: "Email", value: "thearians.h@gmail.com", href: "mailto:thearians.h@gmail.com" },
             ].map((c) => (
               <motion.li key={c.label} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <a href={c.href} target="_blank" rel="noreferrer" className="flex items-center gap-4 group">
