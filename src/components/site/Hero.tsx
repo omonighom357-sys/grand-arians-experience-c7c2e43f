@@ -57,7 +57,7 @@ export function Hero() {
           transition={{ delay: 0.4, duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
           className="text-primary text-sm md:text-base tracking-[0.4em] uppercase mb-6"
         >
-          Arians Hotels &amp; Suites · Udu, Delta State
+          Arians Hotels &amp; Suites · A Citadel for Comfort
         </motion.p>
 
         <motion.h1
@@ -66,7 +66,7 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
           className="font-display text-[2.6rem] sm:text-5xl md:text-7xl lg:text-8xl text-foreground max-w-4xl leading-[1.02]"
         >
-          Experience <span className="text-gradient-gold italic">luxury</span> beyond comfort
+          Your <span className="text-gradient-gold italic">citadel</span> for comfort
         </motion.h1>
 
         <motion.p
@@ -75,7 +75,7 @@ export function Hero() {
           transition={{ delay: 0.95, duration: 0.9 }}
           className="mt-8 max-w-xl text-base md:text-lg text-foreground/80 leading-relaxed"
         >
-          Where refined hospitality meets timeless elegance — premium suites, exquisite dining and unforgettable moments curated with care.
+          Where refined hospitality meets timeless elegance — premium suites, exquisite dining and unforgettable moments, curated with care in the heart of Udu, Delta State.
         </motion.p>
 
         <motion.div
