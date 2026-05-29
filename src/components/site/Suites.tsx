@@ -6,7 +6,7 @@ import diamond from "@/assets/room-diamond.jpg";
 import whitehouse from "@/assets/suite-whitehouse.jpg";
 import presidential from "@/assets/suite-presidential.jpg";
 
-const WHATSAPP = "2348165879354";
+const WHATSAPP = "2347075748942";
 
 const rooms = [
   {
