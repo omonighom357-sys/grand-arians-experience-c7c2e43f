@@ -90,7 +90,7 @@ export function About() {
 
           <div className="mt-12 grid grid-cols-3 gap-6">
             {[
-              { value: 1200, suffix: "+", label: "Guests Served" },
+              { value: 1300, suffix: "+", label: "Guests Served" },
               { value: 2, suffix: "", label: "Luxury Suites" },
               { value: 3, suffix: "+", label: "Years of Excellence" },
             ].map((s) => (
