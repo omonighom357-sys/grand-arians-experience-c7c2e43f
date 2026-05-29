@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MessageCircle, X } from "lucide-react";
 
-const WHATSAPP = "2348165879354";
+const WHATSAPP = "2347075748942";
 const message = encodeURIComponent(
   "Hello Arians Hotels & Suites, I would like to make a booking. Please share availability and rates.",
 );
