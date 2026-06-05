@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { BookingDialog } from "./BookingDialog";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -53,12 +54,18 @@ export function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="#suites"
-          className="hidden lg:inline-flex items-center gap-2 rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-gold hover:scale-105 transition-transform"
-        >
-          Book Now
-        </a>
+        <div className="hidden lg:block">
+          <BookingDialog
+            trigger={
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-gold hover:scale-105 transition-transform"
+              >
+                Book Now
+              </button>
+            }
+          />
+        </div>
 
         <button onClick={() => setOpen(!open)} className="lg:hidden text-foreground p-2" aria-label="Toggle menu">
           {open ? <X /> : <Menu />}
