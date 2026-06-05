@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
-import { Sparkles, UtensilsCrossed, Wine, Briefcase, Flower2 } from "lucide-react";
+import { Sparkles, UtensilsCrossed, Wine, Briefcase, BedDouble } from "lucide-react";
 
 const experiences = [
   {
-    icon: Flower2,
-    title: "Signature Spa",
-    text: "Restorative rituals, hot stone therapy and bespoke massages performed by trained therapists in our serene wellness lounge.",
+    icon: BedDouble,
+    title: "Restful Suites",
+    text: "Plush bedding, blackout drapery and climate-controlled comfort designed for deep, uninterrupted rest.",
   },
   {
     icon: UtensilsCrossed,
