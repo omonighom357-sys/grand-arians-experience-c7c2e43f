@@ -1,5 +1,5 @@
-import { motion, useInView, useMotionValue, useTransform, animate } from "motion/react";
-import { useEffect, useRef } from "react";
+import { motion, useInView, animate } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import exterior from "@/assets/exterior-front.jpg";
 import room from "@/assets/room-gold.jpg";
 import roomAlt from "@/assets/room-diamond.jpg";
@@ -7,14 +7,21 @@ import roomAlt from "@/assets/room-diamond.jpg";
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const mv = useMotionValue(0);
-  const rounded = useTransform(mv, (v) => Math.round(v).toLocaleString() + suffix);
+  const [value, setValue] = useState(0);
 
   useEffect(() => {
-    if (inView) animate(mv, to, { duration: 2, ease: "easeOut" });
-  }, [inView, to, mv]);
+    if (!inView) return;
 
-  return <motion.span ref={ref}>{rounded}</motion.span>;
+    const controls = animate(0, to, {
+      duration: 1.6,
+      ease: "easeOut",
+      onUpdate: (latest) => setValue(Math.round(latest)),
+    });
+
+    return () => controls.stop();
+  }, [inView, to]);
+
+  return <span ref={ref}>{value.toLocaleString() + suffix}</span>;
 }
 
 export function About() {
