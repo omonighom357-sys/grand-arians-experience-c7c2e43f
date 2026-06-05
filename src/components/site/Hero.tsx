@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import hero from "@/assets/exterior-front.jpg";
+import { BookingDialog } from "./BookingDialog";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -84,13 +85,17 @@ export function Hero() {
           transition={{ delay: 1.15, duration: 0.9 }}
           className="mt-12 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto"
         >
-          <a
-            href="#suites"
-            className="btn-shine group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-7 sm:px-8 py-4 text-primary-foreground font-medium shadow-gold hover:scale-105 transition-transform w-full sm:w-auto text-center"
-          >
-            Book a Room
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          <BookingDialog
+            trigger={
+              <button
+                type="button"
+                className="btn-shine group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-7 sm:px-8 py-4 text-primary-foreground font-medium shadow-gold hover:scale-105 transition-transform w-full sm:w-auto text-center"
+              >
+                Book a Room
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </button>
+            }
+          />
           <a
             href="#about"
             className="inline-flex items-center justify-center gap-3 rounded-full glass-light px-7 sm:px-8 py-4 text-foreground font-medium hover:bg-foreground/10 transition-colors w-full sm:w-auto text-center"
