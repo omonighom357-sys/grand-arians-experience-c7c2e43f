@@ -75,7 +75,8 @@ export function About() {
             transition={{ delay: 0.1 }}
             className="font-display text-4xl md:text-6xl text-foreground mb-8 leading-tight"
           >
-            A top-class retreat in the <span className="text-gradient-gold italic">heart of Udu</span>
+            A top-class retreat in the{" "}
+            <span className="text-gradient-gold italic">heart of Udu</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,13 +86,13 @@ export function About() {
             className="space-y-5 text-muted-foreground leading-relaxed"
           >
             <p>
-              The Arians Hotel and Suites is a top-class hotel located at Arians Crescent off
-              Emuobo Ono-Sorhue Road, opposite Williams Street, Udu L.G.A., Delta State.
+              The Arians Hotel and Suites is a top-class hotel located at Arians Crescent off Emuobo
+              Ono-Sorhue Road, opposite Williams Street, Udu L.G.A., Delta State.
             </p>
             <p>
               We blend refined comfort with warm hospitality — free Wi-Fi, swimming pool,
-              complimentary breakfast, restaurant, a 250-capacity event hall, bar, games,
-              spa & massage, and a full menu of delights from shawarma to pastries.
+              complimentary breakfast, restaurant, a 250-capacity event hall, bar, games, spa &
+              massage, and a full menu of delights from shawarma to pastries.
             </p>
           </motion.div>
 
@@ -111,7 +112,9 @@ export function About() {
                 <div className="text-3xl md:text-4xl font-display text-gradient-gold">
                   <Counter to={s.value} suffix={s.suffix} />
                 </div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">{s.label}</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">
+                  {s.label}
+                </div>
               </motion.div>
             ))}
           </div>
