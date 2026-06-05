@@ -5,14 +5,13 @@ import gold from "@/assets/room-gold.jpg";
 import diamond from "@/assets/room-diamond.jpg";
 import whitehouse from "@/assets/suite-whitehouse.jpg";
 import presidential from "@/assets/suite-presidential.jpg";
-
-const WHATSAPP = "2347075748942";
+import { BookingDialog, ROOM_PRICES } from "./BookingDialog";
 
 const rooms = [
   {
     name: "Silver Room",
     tier: "Room",
-    price: "₦19,800",
+    price: ROOM_PRICES["Silver Room"],
     image: silver,
     desc: "Refined comfort, timeless interiors and a serene atmosphere — the perfect introduction to Arians elegance.",
     amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "King bed"],
@@ -20,7 +19,7 @@ const rooms = [
   {
     name: "Gold Room",
     tier: "Room",
-    price: "₦28,600",
+    price: ROOM_PRICES["Gold Room"],
     image: gold,
     desc: "Warm gilded accents, plush bedding and curated finishes for the discerning traveler.",
     amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Marble bath"],
@@ -28,7 +27,7 @@ const rooms = [
   {
     name: "Diamond Room",
     tier: "Room",
-    price: "₦38,500",
+    price: ROOM_PRICES["Diamond Room"],
     image: diamond,
     desc: "An intimate sanctuary of dark sophistication, crystal lighting and uncompromising comfort.",
     amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Lounge area"],
@@ -36,7 +35,7 @@ const rooms = [
   {
     name: "White House Suite",
     tier: "Suite",
-    price: "₦55,000",
+    price: ROOM_PRICES["White House Suite"],
     image: whitehouse,
     desc: "A statement suite with a plush tufted bed, dedicated lounge and a marble entertainment wall — Arians at its boldest.",
     amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Private lounge"],
@@ -44,17 +43,12 @@ const rooms = [
   {
     name: "Presidential Suite",
     tier: "Suite",
-    price: "₦75,000",
+    price: ROOM_PRICES["Presidential Suite"],
     image: presidential,
     desc: "Our flagship suite — warm walnut paneling, ambient lighting and an executive lounge crafted for distinguished guests.",
     amenities: ["Smart TV", "Air Conditioning", "Free Wi-Fi", "Executive lounge"],
   },
 ];
-
-function whatsappLink(room: string) {
-  const msg = `Hello Arians Hotels & Suites, I would like to book the ${room} for [DATE]. Please provide availability and payment details.`;
-  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
-}
 
 export function Suites() {
   return (
@@ -117,12 +111,17 @@ export function Suites() {
                     <div className="text-xs uppercase tracking-widest text-muted-foreground">From</div>
                     <div className="font-display text-2xl text-gradient-gold">{r.price}<span className="text-xs text-muted-foreground ml-1">/night</span></div>
                   </div>
-                  <a
-                    href={whatsappLink(r.name)} target="_blank" rel="noreferrer"
-                    className="btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-4 py-3 text-sm font-medium text-primary-foreground shadow-gold hover:scale-105 transition-transform w-full sm:w-auto"
-                  >
-                    <MessageCircle className="h-4 w-4" /> Book on WhatsApp
-                  </a>
+                  <BookingDialog
+                    defaultRoom={r.name}
+                    trigger={
+                      <button
+                        type="button"
+                        className="btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-4 py-3 text-sm font-medium text-primary-foreground shadow-gold hover:scale-105 transition-transform w-full sm:w-auto"
+                      >
+                        <MessageCircle className="h-4 w-4" /> Book Now
+                      </button>
+                    }
+                  />
                 </div>
               </div>
             </motion.article>
