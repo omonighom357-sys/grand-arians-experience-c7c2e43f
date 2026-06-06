@@ -5,7 +5,7 @@ import { Star, Quote } from "lucide-react";
 const reviews = [
   { name: "Adaeze O.", role: "Lagos, Nigeria", rating: 5, text: "Absolutely breathtaking. The Presidential Suite felt like a private palace. Staff anticipated every need." },
   { name: "Michael T.", role: "London, UK", rating: 5, text: "An oasis in Delta. From the warm welcome to the spa, every detail was world-class." },
-  { name: "Chioma N.", role: "Abuja, Nigeria", rating: 5, text: "The Gold Room was stunning, breakfast was divine, and the pool was the perfect retreat." },
+  { name: "Chioma N.", role: "Abuja, Nigeria", rating: 5, text: "The Gold Room was stunning, the dining was divine, and the pool was the perfect retreat." },
   { name: "Ifeanyi K.", role: "Port Harcourt", rating: 5, text: "Hosted a 200-guest event in the hall — flawless. We will definitely be back." },
 ];
 
