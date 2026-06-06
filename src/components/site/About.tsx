@@ -1,17 +1,20 @@
-import { motion, useInView, animate } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { motion, animate, useReducedMotion } from "motion/react";
+import { useEffect, useState } from "react";
 import exterior from "@/assets/exterior-front.jpg";
 import room from "@/assets/room-gold.jpg";
 import roomAlt from "@/assets/room-diamond.jpg";
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [value, setValue] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+  const [value, setValue] = useState(to);
 
   useEffect(() => {
-    if (!inView) return;
+    if (prefersReducedMotion) {
+      setValue(to);
+      return;
+    }
 
+    setValue(0);
     const controls = animate(0, to, {
       duration: 1.6,
       ease: "easeOut",
@@ -19,9 +22,9 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     });
 
     return () => controls.stop();
-  }, [inView, to]);
+  }, [prefersReducedMotion, to]);
 
-  return <span ref={ref}>{value.toLocaleString() + suffix}</span>;
+  return <span>{value.toLocaleString() + suffix}</span>;
 }
 
 export function About() {
