@@ -94,8 +94,8 @@ export function About() {
             </p>
             <p>
               We blend refined comfort with warm hospitality — free Wi-Fi, swimming pool,
-              complimentary breakfast, restaurant, a 250-capacity event hall, bar, games, spa &
-              massage, and a full menu of delights from shawarma to pastries.
+              restaurant, a 250-capacity event hall, bar, games lounge, and a full menu of
+              delights from shawarma to pastries.
             </p>
           </motion.div>
 
