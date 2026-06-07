@@ -1,31 +1,7 @@
-import { motion, animate, useReducedMotion } from "motion/react";
-import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 import exterior from "@/assets/exterior-front.jpg";
 import room from "@/assets/room-gold.jpg";
 import roomAlt from "@/assets/room-diamond.jpg";
-
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const prefersReducedMotion = useReducedMotion();
-  const [value, setValue] = useState(to);
-
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      setValue(to);
-      return;
-    }
-
-    setValue(0);
-    const controls = animate(0, to, {
-      duration: 1.6,
-      ease: "easeOut",
-      onUpdate: (latest) => setValue(Math.round(latest)),
-    });
-
-    return () => controls.stop();
-  }, [prefersReducedMotion, to]);
-
-  return <span>{value.toLocaleString() + suffix}</span>;
-}
 
 export function About() {
   return (
@@ -99,21 +75,21 @@ export function About() {
             </p>
           </motion.div>
 
-          <div className="mt-12 grid grid-cols-3 gap-6">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
             {[
-              { value: 1300, suffix: "+", label: "Guests Served" },
-              { value: 2, suffix: "", label: "Luxury Suites" },
-              { value: 3, suffix: "+", label: "Years of Excellence" },
+              { value: "13,000+", label: "Guests Served" },
+              { value: "2", label: "Luxury Suites" },
+              { value: "3+", label: "Years of Excellence" },
             ].map((s) => (
               <motion.div
                 key={s.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-center lg:text-left"
+                className="text-center lg:text-left min-w-0"
               >
-                <div className="text-3xl md:text-4xl font-display text-gradient-gold">
-                  <Counter to={s.value} suffix={s.suffix} />
+                <div className="text-4xl sm:text-3xl md:text-4xl font-display text-gradient-gold leading-none whitespace-nowrap">
+                  {s.value}
                 </div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">
                   {s.label}
