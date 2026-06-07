@@ -77,15 +77,12 @@ export function About() {
 
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
             {[
-              { value: "13,000+", label: "Guests Served" },
+              { value: "1,300+", label: "Guests Served" },
               { value: "2", label: "Luxury Suites" },
               { value: "3+", label: "Years of Excellence" },
             ].map((s) => (
-              <motion.div
+              <div
                 key={s.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 className="text-center lg:text-left min-w-0"
               >
                 <div className="text-4xl sm:text-3xl md:text-4xl font-display text-gradient-gold leading-none whitespace-nowrap">
@@ -94,7 +91,7 @@ export function About() {
                 <div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">
                   {s.label}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
